@@ -1,12 +1,27 @@
-# React + Vite
+# CoNoo React Final Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Final Netfilx**
 
-Currently, two official plugins are available:
+### **[Vom 바로가기~☎️](https://netfilx-rec5.vercel.app/)**
+### **[[logoo](https://github.com/user-attachments/assets/b9a2c446-f315-4512-8a11-1bf1cbd45f46)](https://netfilx-rec5.vercel.app/)**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+<br>
+
+## 사용 언어
+* react
+
+<br>
+
+## 강의 외 추가 구현 내용
+* 로고 제작
+
+<br>
+
+## **피드백 받은 내용**
+
+<br>
+
+## **느낀점 & 개선사항**
+api key 설정할 때 vite는 다른 방식을 사용하여 가져옴.
