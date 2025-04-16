@@ -63,7 +63,7 @@ const AppLayout = () => {
                 style={{ fontFamily: "Paperlogy-4Regular", fontSize: 13 }}
               >
                 <Nav.Link href="/">Home</Nav.Link>
-                <Nav.Link href="movies">Movies</Nav.Link>
+                <Nav.Link href="/movies">Movies</Nav.Link>
               </Nav>
               <Form className="d-flex">
                 <Form.Control
