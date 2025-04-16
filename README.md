@@ -1,4 +1,4 @@
-# CoNoo React Final Project
+# CoNoo React Final Project - rec7
 
 **Final Netfilx**
 
@@ -15,7 +15,6 @@
 <br>
 
 ## 강의 외 추가 구현 내용
-* 로고 제작
 
 <br>
 
@@ -24,4 +23,8 @@
 <br>
 
 ## **느낀점 & 개선사항**
-api key 설정할 때 vite는 다른 방식을 사용하여 가져옴.
+처음에 vite로 api를 한게 아니라 중간에 수정하였는데
+
+api.jsx는 수정을 하지 못해 401오류가 생김.
+
+REACT_APP_API_KEY에서 VITE_APP_API_KEY로 수정하여 오류 해결.
