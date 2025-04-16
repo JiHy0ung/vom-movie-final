@@ -6,17 +6,18 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import { Outlet } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const AppLayout = () => {
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
 
-  // const goToHome =()=>{
-  //   navigate('/');
-  // };
+  const goToHome =()=>{
+    navigate('/');
+  };
 
-  // const goToMovies =()=>{
-  //   navigate('/movies');
-  // };
+  const goToMovies =()=>{
+    navigate('/movies');
+  };
 
   const expand = "md";
 
@@ -62,8 +63,8 @@ const AppLayout = () => {
                 className="justify-content-start flex-grow-1 px-1"
                 style={{ fontFamily: "Paperlogy-4Regular", fontSize: 13 }}
               >
-                <Nav.Link href="/">Home</Nav.Link>
-                <Nav.Link href="/movies">Movies</Nav.Link>
+                <Nav.Link href="/" onClick={goToHome}>Home</Nav.Link>
+                <Nav.Link href="/movies" onClick={goToMovies}>Movies</Nav.Link>
               </Nav>
               <Form className="d-flex">
                 <Form.Control
