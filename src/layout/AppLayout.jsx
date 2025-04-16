@@ -8,13 +8,12 @@ import Offcanvas from "react-bootstrap/Offcanvas";
 import { Outlet } from "react-router-dom";
 
 const AppLayout = () => {
-
   // const navigate = useNavigate();
 
   // const goToHome =()=>{
   //   navigate('/');
   // };
-  
+
   // const goToMovies =()=>{
   //   navigate('/movies');
   // };
@@ -23,7 +22,14 @@ const AppLayout = () => {
 
   return (
     <div>
-      <Navbar expand={expand} variant="dark" bg="dark" data-bs-theme="dark" data-theme="dark">
+      <Navbar
+        expand={expand}
+        variant="dark"
+        bg="dark"
+        data-bs-theme="dark"
+        data-theme="dark"
+        style={{ backgroundColor: "#2b2f33" }}
+      >
         <Container fluid>
           <Navbar.Brand href="/" className="ms-2">
             <img
@@ -37,18 +43,29 @@ const AppLayout = () => {
             id={`offcanvasNavbar-expand-${expand}`}
             aria-labelledby={`offcanvasNavbarLabel-expand-${expand}`}
             placement="end"
+            variant="dark"
+            bg="dark"
+            data-bs-theme="dark"
+            data-theme="dark"
           >
             <Offcanvas.Header closeButton>
               <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${expand}`}>
-                Offcanvas
+                <img
+                  className="logo-img"
+                  src="logo/vom-logo-dark.png"
+                  alt="logo-image"
+                />
               </Offcanvas.Title>
             </Offcanvas.Header>
             <Offcanvas.Body>
-              <Nav className="justify-content-start flex-grow-1 px-1">
-                <Nav.Link href="/" >Home</Nav.Link>
-                <Nav.Link href="movies" >Movies</Nav.Link>
+              <Nav
+                className="justify-content-start flex-grow-1 px-1"
+                style={{ fontFamily: "Paperlogy-4Regular", fontSize: 13 }}
+              >
+                <Nav.Link href="/">Home</Nav.Link>
+                <Nav.Link href="movies">Movies</Nav.Link>
               </Nav>
-              <Form className="d-flex" >
+              <Form className="d-flex">
                 <Form.Control
                   type="search"
                   placeholder="Search"

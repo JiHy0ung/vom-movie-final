@@ -62,15 +62,13 @@
 }
 
 *{
-    font-family: 'Paperlogy-4Regular';
-    color: white;
     font-size: 15px;
 }
 
 .full-container {
   height: 100vh;
   width: 100vw;
-  background-color: #2b2f33;
+  background-color: rgb(25, 24, 29);
 }
 
 .logo-img {
