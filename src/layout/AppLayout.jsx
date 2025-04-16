@@ -61,10 +61,10 @@ const AppLayout = () => {
             <Offcanvas.Body>
               <Nav
                 className="justify-content-start flex-grow-1 px-1"
-                style={{ fontFamily: "Paperlogy-4Regular", fontSize: 13 }}
+                style={{ fontFamily: "Paperlogy-5Medium", fontSize: 15 }}
               >
-                <Nav.Link onClick={goToHome}>Home</Nav.Link>
-                <Nav.Link onClick={goToMovies}>Movies</Nav.Link>
+                <Nav.Link onClick={goToHome} className="mx-2">Home</Nav.Link>
+                <Nav.Link onClick={goToMovies} className="mx-2">Movies</Nav.Link>
               </Nav>
               <Form className="d-flex">
                 <Form.Control
