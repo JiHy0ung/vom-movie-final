@@ -63,8 +63,8 @@ const AppLayout = () => {
                 className="justify-content-start flex-grow-1 px-1"
                 style={{ fontFamily: "Paperlogy-4Regular", fontSize: 13 }}
               >
-                <Nav.Link href="/" onClick={goToHome}>Home</Nav.Link>
-                <Nav.Link href="/movies" onClick={goToMovies}>Movies</Nav.Link>
+                <Nav.Link to="/" >Home</Nav.Link>
+                <Nav.Link to="/movies">Movies</Nav.Link>
               </Nav>
               <Form className="d-flex">
                 <Form.Control
