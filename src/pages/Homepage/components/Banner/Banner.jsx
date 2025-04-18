@@ -28,7 +28,7 @@ const Banner = () => {
       <div className="banner-text-area">
         <h1 className="banner-movie-title">{data?.results[0].title}</h1>
         {/* 줄거리가 한글로 안나옴 */}
-        <p className="banner-movie-overview">{data?.results[1].overview}</p>
+        <p className="banner-movie-overview">{data?.results[0].overview}</p>
       </div>
     </div>
   );
