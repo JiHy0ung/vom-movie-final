@@ -85,7 +85,11 @@
   margin: 0;
   color: white;
   font-size: 50px;
+  padding-bottom: 2rem;
+
 }
+
+
 
 @media (max-width: 600px) {
   .popular-title {
@@ -95,7 +99,7 @@
 
 @media (max-width: 430px) {
   .carousel-container {
-    height: 300px;
+    height: 280px;
   }
 
   .popular-container {
@@ -105,5 +109,7 @@
   .popular-title {
     font-size: 30px;
     z-index: 0;
+    padding-bottom: 1rem;
+
   }
 }

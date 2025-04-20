@@ -79,12 +79,16 @@
   overflow: hidden;
   cursor: pointer;
   transition: 0.5s;
+  box-shadow: 0 0 20px black;
 }
 
 .overlay {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
   width: 100%;
   height: 100%;
-  background: rgba(43, 41, 41, 0.9);
+  background: rgba(43, 41, 41, 0.8);
   opacity: 0;
   transition: all 1s;
   color: white;
@@ -99,18 +103,38 @@
 
 .movie-card:hover {
   transform: scale(1.3) translateZ(20px);
+  box-shadow: 0 0 200px white;
   z-index: 2;
 }
 
-.moviecard-title{
-    font-family: "Paperlogy-6SemiBold";
-    font-size: 20px;
-    letter-spacing: -1px;
-    color: white;
+.moviecard-vote {
+  font-family: "Paperlogy-4Regular";
 }
 
-.moviecard-genre{
-    margin-right: 0.5rem;
+.moviecard-vote-score {
+  font-family: "Paperlogy-5Medium";
+}
+
+.moviecard-popularity {
+  font-family: "Paperlogy-4Regular";
+}
+
+.moviecard-title {
+  font-family: "Paperlogy-6SemiBold";
+  font-size: 20px;
+  letter-spacing: -1px;
+  color: white;
+  width: fit-content;
+  padding-bottom: 5px;
+  border-bottom: 2px solid white;
+}
+
+.moviecard-genre-area {
+}
+
+.moviecard-genre {
+  font-family: "Paperlogy-4Regular";
+  margin-right: 0.5rem;
 }
 
 @media (max-width: 430px) {

@@ -85,6 +85,7 @@
     margin: 0;
     color: white;
     font-size: 50px;
+    padding-bottom: 2rem;
   }
 
   @media (max-width: 600px) {
@@ -95,7 +96,7 @@
   
   @media (max-width: 430px) {
     .carousel-container {
-      height: 300px;
+      height: 280px;
     }
   
     .upcoming-container {
@@ -105,6 +106,8 @@
     .upcoming-title {
       font-size: 30px;
       z-index: 0;
+      padding-bottom: 1rem;
+
     }
   }
   
