@@ -78,6 +78,13 @@
 
 @media (max-width: 930px) {
   
+  .banner {
+    height: 60vh;
+  }
+
+  .banner::before {
+    height: 60vh;
+  }
 
   .banner-movie-title {
     font-size: 50px;
@@ -104,6 +111,10 @@
 @media (max-width: 390px) {
 
   .banner {
+    height: 50vh;
+  }
+
+  .banner::before {
     height: 50vh;
   }
 
