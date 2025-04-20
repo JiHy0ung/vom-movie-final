@@ -5,15 +5,21 @@
   4. upcoming movie
 */
 
-import React from 'react'
-import Banner from './components/Banner/Banner'
+import React from "react";
+import Banner from "./components/Banner/Banner";
+import PopularMovieslide from "./components/PopularMovieslide/PopularMovieslide";
+import TopRatedMovieslide from "./components/TopRatedMovieslide/TopRatedMovieslide";
+import UpComingMovieslide from "./components/UpComingMovieslide/UpcomingMovieslide";
 
 const Homepage = () => {
   return (
     <div>
-      <Banner/>
+      <Banner />
+      <PopularMovieslide />
+      <TopRatedMovieslide />
+      <UpComingMovieslide />
     </div>
-  )
-}
+  );
+};
 
-export default Homepage
+export default Homepage;
