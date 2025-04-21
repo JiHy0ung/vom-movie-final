@@ -89,6 +89,12 @@ const MovieCard = ({ movie }) => {
               {id}
             </Badge>
           ))}
+
+          <p className="moviecard-overview">
+            {movie.overview.length > 120
+              ? movie.overview.slice(0, 120) + ". . ."
+              : movie.overview}
+          </p>
         </div>
       </div>
     </div>
