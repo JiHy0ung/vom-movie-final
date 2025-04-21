@@ -115,7 +115,7 @@
   z-index: 2;
 }
 
-.adult-title{
+.adult-title {
   display: flex !important;
   gap: 4px;
 }
@@ -154,7 +154,7 @@
   background-color: rgba(255, 255, 255, 0.345) !important;
 }
 
-.star-icon{
+.star-icon {
   width: 20px;
   height: 20px;
 }
@@ -182,5 +182,26 @@
   .movie-card {
     width: 140px;
     height: 210px;
+  }
+
+  .moviecard-title {
+    font-size: 14px;
+  }
+
+  .star-icon {
+    width: 14px;
+    height: 14px;
+  }
+
+  .moviecard-genre {
+    font-size: 8px !important;
+  }
+
+  .moviecard-popularity {
+    font-size: 12px !important;
+  }
+
+  .moviecard-overview {
+    font-size: 10px;
   }
 }

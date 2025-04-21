@@ -91,8 +91,8 @@ const MovieCard = ({ movie }) => {
           ))}
 
           <p className="moviecard-overview">
-            {movie.overview.length > 120
-              ? movie.overview.slice(0, 120) + ". . ."
+            {movie.overview.length > 50
+              ? movie.overview.slice(0, 50) + ". . ."
               : movie.overview}
           </p>
         </div>
