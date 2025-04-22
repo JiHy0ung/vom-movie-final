@@ -23,7 +23,10 @@ const MoviePage = () => {
 
   const keyword = query.get("q");
 
-  const { data, isLoading, isError, error } = useSearchMovieQuery({ keyword, page });
+  const { data, isLoading, isError, error } = useSearchMovieQuery({
+    keyword,
+    page,
+  });
 
   const handlePageClick = ({ selected }) => {
     console.log("page", page);
@@ -49,6 +52,12 @@ const MoviePage = () => {
     return <Alert variant="danger">{error.message}</Alert>;
   }
 
+  const noResults = data?.results.length === 0 && keyword && (
+    <p style={{ color: "gray", fontSize: "1.2rem", marginTop: "20px" }}>
+      <strong>{`"${keyword}"`}</strong> 에 대한 검색 결과가 없습니다.
+    </p>
+  );
+
   return (
     <Container>
       <Row>
@@ -57,6 +66,7 @@ const MoviePage = () => {
           필터{" "}
         </Col>
         <Col lg={8} xs={12}>
+          {noResults}
           <Row>
             {data?.results.map((movie, index) => (
               <Col key={index} lg={4} xs={12}>

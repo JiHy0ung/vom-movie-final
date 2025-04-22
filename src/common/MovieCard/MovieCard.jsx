@@ -13,11 +13,11 @@ const MovieCard = ({ movie }) => {
   const { data: genreData } = useMovieGenreQuery();
 
   const showGenre = (genreIdList) => {
-    if (!genreData) return [];
+    if (!genreData || !genreIdList) return [];
 
     const genreNameList = genreIdList.map((id) => {
-      const genreOBj = genreData.find((genre) => genre.id === id);
-      return genreOBj.name;
+      const genreObj = genreData.find((genre) => genre.id === id);
+      return genreObj ? genreObj.name : "";
     });
 
     return genreNameList;
