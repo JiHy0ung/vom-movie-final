@@ -5,6 +5,7 @@ import { Col, Container, Row, Spinner } from "react-bootstrap";
 import MovieCard from "../../common/MovieCard/MovieCard";
 import ReactPaginate from "react-paginate";
 import "./MoviePage.style.css";
+import { useMovieGenreQuery } from "../../hooks/useMovieGenre";
 
 /*
   movie 페이지에 올 수 있는 경로 2가지
@@ -22,6 +23,10 @@ const MoviePage = () => {
   const [query, setQuery] = useSearchParams();
   const [page, setPage] = useState(1);
   const [sort, setSort] = useState("desc");
+  const [selectedGenre, setSelectedGenre] = useState(null);
+
+  // 장르
+  const { data: genres } = useMovieGenreQuery();
 
   const keyword = query.get("q");
 
@@ -33,6 +38,7 @@ const MoviePage = () => {
     keyword,
     page,
     sort,
+    genreId: selectedGenre,
   });
 
   const handlePageClick = ({ selected }) => {
@@ -89,7 +95,28 @@ const MoviePage = () => {
               </button>
             </div>
             <div className="genre-select-area">
-
+              <div className="genre-select">
+                <button
+                  className="genre-button"
+                  onClick={() => setSelectedGenre(null)}
+                >
+                  전체 보기
+                </button>
+                {genres?.map((genre) => (
+                  <button
+                    key={genre.id}
+                    className={`genre-button ${
+                      selectedGenre === genre.id ? "selected" : ""
+                    }`}
+                    onClick={() => {
+                      setSelectedGenre(genre.id);
+                      setPage(1); // 필터 변경 시 첫 페이지로 초기화
+                    }}
+                  >
+                    {genre.name}
+                  </button>
+                ))}
+              </div>
             </div>
           </div>
         </Col>

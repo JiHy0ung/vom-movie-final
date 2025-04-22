@@ -76,12 +76,27 @@
 }
 
 .genre-select-area {
+  display: flex;
+  flex-direction: column;
   font-family: "Paperlogy-5Medium";
   font-size: 20px;
   color: white;
-  border: 1px solid white;
   padding: 1rem;
   width: fit-content;
+}
+
+.genre-select{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  border: 1px solid white;
+  padding: 1rem;
+}
+
+.genre-button{
+  color: white;
+  background-color: rgba(255, 255, 255, 0);
+  border-bottom: 1px solid white;
 }
 
 .no-result-area {
