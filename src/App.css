@@ -88,3 +88,12 @@
   align-items: center;
   width: 80px;
 }
+
+.nav-search-input{
+  font-family: "Paperlogy-4Regular";
+}
+
+.nav-search-button{
+  font-family: "Paperlogy-6SemiBold" !important;
+  width: 80px;
+}

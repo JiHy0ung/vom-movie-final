@@ -82,6 +82,7 @@
   width: 220px;
   height: 330px;
   background-size: cover;
+  transform-origin: center center;
   background-position: center;
   background-repeat: no-repeat;
   overflow: hidden;
@@ -97,7 +98,8 @@
   gap: 5px;
   width: 100%;
   height: 100%;
-  background: rgba(43, 41, 41, 0.8);
+  background: rgba(43, 41, 41, 0.5);
+  backdrop-filter: blur(5px);
   opacity: 0;
   transition: all 1s;
   color: white;
@@ -108,10 +110,11 @@
 
 .overlay:hover {
   opacity: 1;
+  z-index: 1;
 }
 
 .movie-card:hover {
-  transform: scale(1.3) translateZ(20px);
+  transform: scale(1.3);
   box-shadow: 0 0 200px white;
   z-index: 2;
 }

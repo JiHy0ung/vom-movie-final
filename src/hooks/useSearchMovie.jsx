@@ -12,7 +12,7 @@ const fetchSearchMovie = ({ keyword, page, sort, genreId }) => {
     );
   }
 
-  return api.get(`/movie/popular?page=${page}`);
+  return api.get(`discover/movie?sort_by=popularity.${sort}&page=${page}`)
 };
 
 export const useSearchMovieQuery = ({ keyword, page, sort, genreId }) => {

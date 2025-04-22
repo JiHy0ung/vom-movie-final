@@ -81,8 +81,8 @@ const MoviePage = () => {
 
   return (
     <Container className="movie-page-container">
-      <Row>
-        <Col lg={4} xs={12}>
+      <Row style={{ display: "flex", justifyContent: "center" }}>
+        <Col lg={2} xs={12}>
           <div className="filter-area">
             <div className="popularity-area">
               <button className="popularity-button" onClick={handleSort}>
@@ -121,7 +121,16 @@ const MoviePage = () => {
           </div>
         </Col>
         <Col lg={8} xs={12}>
-          {noResults}
+          {keyword ? (
+            <div className="no-result-area">
+              <p className="no-result">
+                <span className="no-result-keyword">{`"${keyword}"`}</span>에
+                대한 검색 결과
+              </p>
+            </div>
+          ) : (
+            noResults
+          )}
           <Row>
             {data?.results.map((movie, index) => (
               <Col key={index} lg={3} xs={12}>

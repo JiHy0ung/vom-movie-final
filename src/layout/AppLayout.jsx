@@ -37,7 +37,7 @@ const AppLayout = () => {
         bg="dark"
         data-bs-theme="dark"
         data-theme="dark"
-        style={{ backgroundColor: "#2b2f33" }}
+        style={{ backgroundColor: "#2b2f33", zIndex:"100000"}}
       >
         <Container fluid>
           <Navbar.Brand href="/" className="ms-2">
@@ -81,14 +81,14 @@ const AppLayout = () => {
               <Form className="d-flex" onSubmit={searchByKeyword}>
                 <Form.Control
                   type="search"
-                  placeholder="Search"
-                  className="me-2"
+                  placeholder="영화 검색"
+                  className="me-2 nav-search-input"
                   aria-label="Search"
                   value={keyword}
                   onChange={(event) => setKeyword(event.target.value)}
                 />
-                <Button variant="outline-danger" type="submit">
-                  Search
+                <Button variant="outline-danger" type="submit" className="nav-search-button">
+                  검색
                 </Button>
               </Form>
             </Offcanvas.Body>
