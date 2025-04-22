@@ -98,7 +98,11 @@ const MoviePage = () => {
               <div className="genre-select">
                 <button
                   className="genre-button"
-                  onClick={() => setSelectedGenre(null)}
+                  onClick={() => {
+                    setSelectedGenre(null);
+                    setPage(1);
+                    setQuery({});
+                  }}
                 >
                   전체 보기
                 </button>
