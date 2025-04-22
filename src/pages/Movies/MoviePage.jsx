@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useSearchMovieQuery } from "../../hooks/useSearchMovie";
 import { useSearchParams } from "react-router-dom";
 import { Col, Container, Row, Spinner } from "react-bootstrap";
 import MovieCard from "../../common/MovieCard/MovieCard";
 import ReactPaginate from "react-paginate";
+import "./MoviePage.style.css";
 
 /*
   movie 페이지에 올 수 있는 경로 2가지
@@ -20,18 +21,29 @@ import ReactPaginate from "react-paginate";
 const MoviePage = () => {
   const [query, setQuery] = useSearchParams();
   const [page, setPage] = useState(1);
+  const [sort, setSort] = useState("desc");
 
   const keyword = query.get("q");
+
+  useEffect(() => {
+    setPage(1);
+  }, [keyword]);
 
   const { data, isLoading, isError, error } = useSearchMovieQuery({
     keyword,
     page,
+    sort,
   });
 
   const handlePageClick = ({ selected }) => {
     console.log("page", page);
 
     setPage(selected + 1);
+  };
+
+  const handleSort = () => {
+    setSort((prev) => (prev === "desc" ? "asc" : "desc"));
+    setPage(1);
   };
 
   console.log("ddd", data);
@@ -53,34 +65,50 @@ const MoviePage = () => {
   }
 
   const noResults = data?.results.length === 0 && keyword && (
-    <p style={{ color: "gray", fontSize: "1.2rem", marginTop: "20px" }}>
-      <strong>{`"${keyword}"`}</strong> 에 대한 검색 결과가 없습니다.
-    </p>
+    <div className="no-result-area">
+      <p className="no-result">
+        <span className="no-result-keyword">{`"${keyword}"`}</span>에 대한 검색
+        결과가 없습니다.
+      </p>
+    </div>
   );
 
   return (
-    <Container>
+    <Container className="movie-page-container">
       <Row>
         <Col lg={4} xs={12}>
-          {" "}
-          필터{" "}
+          <div className="filter-area">
+            <div className="popularity-area">
+              <button className="popularity-button" onClick={handleSort}>
+                인기도
+                {sort === "desc" ? (
+                  <p className="popularity-desc">⬆︎</p>
+                ) : (
+                  <p className="popularity-asc">⬇︎</p>
+                )}
+              </button>
+            </div>
+            <div className="genre-select-area">
+
+            </div>
+          </div>
         </Col>
         <Col lg={8} xs={12}>
           {noResults}
           <Row>
             {data?.results.map((movie, index) => (
-              <Col key={index} lg={4} xs={12}>
+              <Col key={index} lg={3} xs={12}>
                 <MovieCard movie={movie} />
               </Col>
             ))}
           </Row>
           <ReactPaginate
-            nextLabel="next >"
+            nextLabel=">"
             onPageChange={handlePageClick}
             pageRangeDisplayed={3}
             marginPagesDisplayed={2}
             pageCount={data?.total_pages} // 전체 페이지
-            previousLabel="< previous"
+            previousLabel="<"
             pageClassName="page-item"
             pageLinkClassName="page-link"
             previousClassName="page-item"

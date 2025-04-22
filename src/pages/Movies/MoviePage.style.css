@@ -1,0 +1,154 @@
+@font-face {
+  font-family: "Paperlogy-3Light";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-3Light.woff2")
+    format("woff2");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Paperlogy-5Medium";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-5Medium.woff2")
+    format("woff2");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Paperlogy-7Bold";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-7Bold.woff2")
+    format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Paperlogy-9Black";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-9Black.woff2")
+    format("woff2");
+  font-weight: 900;
+  font-style: normal;
+}
+
+.movie-page-container {
+  padding-block: 4rem;
+  width: 100dvw;
+}
+
+.filter-area {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.popularity-area {
+  font-family: "Paperlogy-7Bold";
+  font-size: 20px;
+  color: white;
+  padding: 1rem;
+  width: fit-content;
+}
+
+.popularity-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: rgba(255, 255, 255, 0);
+  gap: 3px;
+  border: 1px solid white;
+}
+
+.popularity-button:hover {
+  background-color: rgb(255, 255, 255);
+  color: black;
+  border: 1px solid rgb(0, 0, 0);
+}
+
+.popularity-desc{
+  font-size: 20px;
+  margin: 0;
+}
+
+.popularity-asc{
+  font-size: 20px;
+  margin: 0;
+}
+
+.genre-select-area {
+  font-family: "Paperlogy-5Medium";
+  font-size: 20px;
+  color: white;
+  border: 1px solid white;
+  padding: 1rem;
+  width: fit-content;
+}
+
+.no-result-area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.no-result {
+  font-family: "Paperlogy-5Medium";
+  font-size: 15px;
+  color: white;
+}
+
+.no-result-keyword {
+  font-family: "Paperlogy-7Bold";
+  font-size: 20px;
+}
+
+.pagination {
+  padding-top: 4rem;
+  background-color: rgba(255, 255, 255, 0) !important;
+  border-radius: 0px !important;
+  justify-content: center; /* 중앙 정렬 */
+}
+
+/* 페이지 번호 버튼 */
+.page-item {
+  background-color: rgba(255, 255, 255, 0) !important;
+  border-radius: 0px !important;
+  font-family: "Paperlogy-3Light";
+}
+
+/* 페이지 번호 링크 */
+.page-link {
+  background-color: rgba(255, 255, 255, 0) !important;
+  color: #ffffff !important;
+  padding: 10px 15px;
+  text-decoration: none;
+  border-radius: 0px !important;
+}
+
+/* 페이지 번호 링크에 마우스 오버 시 색상 */
+.page-link:hover {
+  background-color: rgba(255, 0, 51, 0.3) !important;
+  color: white !important;
+  font-family: "Paperlogy-9Black";
+}
+
+/* 현재 활성화된 페이지 */
+.page-item.active .page-link {
+  background-color: #ff0033 !important;
+  color: white !important;
+  border: 1px solid #ffffff !important;
+  font-family: "Paperlogy-9Black";
+}
+
+/* "이전", "다음" 버튼 */
+.page-item.disabled .page-link {
+  background-color: #e0e0e0;
+  color: #b0b0b0;
+  cursor: not-allowed;
+  border-radius: 0px !important;
+}
+
+/* 페이지 구분 기호 '...' */
+.page-item.break {
+  background-color: #f8f9fa;
+  color: #6c757d;
+}

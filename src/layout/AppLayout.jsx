@@ -72,10 +72,10 @@ const AppLayout = () => {
                 style={{ fontFamily: "Paperlogy-5Medium", fontSize: 15 }}
               >
                 <Nav.Link onClick={goToHome} className="mx-2">
-                  Home
+                  홈
                 </Nav.Link>
                 <Nav.Link onClick={goToMovies} className="mx-2">
-                  Movies
+                  영화
                 </Nav.Link>
               </Nav>
               <Form className="d-flex" onSubmit={searchByKeyword}>

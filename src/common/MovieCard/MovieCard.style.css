@@ -82,12 +82,13 @@
   width: 220px;
   height: 330px;
   background-size: cover;
-  background-position: center center;
+  background-position: center;
   background-repeat: no-repeat;
   overflow: hidden;
   cursor: pointer;
   transition: 0.5s;
   box-shadow: 0 0 20px black;
+  margin: 2rem;
 }
 
 .overlay {
