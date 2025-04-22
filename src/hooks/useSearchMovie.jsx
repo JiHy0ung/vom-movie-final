@@ -3,22 +3,37 @@ import api from "../utils/api";
 
 const fetchSearchMovie = ({ keyword, page, sort, genreId }) => {
   if (keyword) {
-    return api.get(`/search/movie?query=${keyword}&page=${page}`);
+    return api.get(
+      `/search/movie?query=${keyword}&sort_by=popularity.${sort}&page=${page}`
+    );
   }
 
   if (genreId) {
     return api.get(
-      `discover/movie?with_genres=${genreId}sort_by=popularity.${sort}&page=${page}`
+      `discover/movie?with_genres=${genreId}&sort_by=popularity.${sort}&page=${page}`
     );
   }
 
-  return api.get(`discover/movie?sort_by=popularity.${sort}&page=${page}`)
+  return api.get(`discover/movie?sort_by=popularity.${sort}&page=${page}`);
 };
 
 export const useSearchMovieQuery = ({ keyword, page, sort, genreId }) => {
   return useQuery({
     queryKey: ["movie-search", { keyword, page, sort, genreId }],
     queryFn: () => fetchSearchMovie({ keyword, page, sort, genreId }),
-    select: (result) => result.data,
+    select: (result) => {
+      if (keyword) {
+        const sorted = [...result.data.results].sort((a, b) =>
+          sort === "desc"
+            ? b.popularity - a.popularity
+            : a.popularity - b.popularity
+        );
+        return {
+          ...result.data,
+          results: sorted,
+        };
+      }
+      return result.data;
+    },
   });
 };

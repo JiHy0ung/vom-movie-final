@@ -112,7 +112,8 @@
   justify-content: center;
   align-items: center;
   margin: 0;
-  padding-bottom: 2rem;
+  padding-bottom: 1rem;
+  padding-top: 2rem;
 }
 
 .no-result {
@@ -121,6 +122,7 @@
   align-items: center;
   font-family: "Paperlogy-5Medium";
   font-size: 15px;
+  margin: 0;
   color: white;
 }
 
