@@ -5,12 +5,22 @@ import "react-multi-carousel/lib/styles.css";
 import "./UpcomingMovieslide.style.css";
 import MovieSlider from "../../../../common/MovieSlider/MovieSlider";
 import { responsive } from "../../../../contants/responsive";
+import { Spinner } from "react-bootstrap";
+
 
 const UpComingMovieslide = () => {
   const { data, isLoading, isError, error } = useUpcomingMoviesQuery();
 
   if (isLoading) {
-    return <h1>Loading...</h1>;
+    return (
+      <div>
+        <Spinner
+          animation="border"
+          variant="danger"
+          style={{ width: "5rem", height: "5rem" }}
+        />
+      </div>
+    );
   }
 
   if (isError) {
