@@ -1,9 +1,9 @@
 # CoNoo React Final Project
 
-**Vom**
 
-### **[Vom 바로가기~☎️]()**
-### **[[logoo](https://github.com/user-attachments/assets/b9a2c446-f315-4512-8a11-1bf1cbd45f46)]()**
+### **[Vom 바로가기~🍿](https://vom-movie-final.vercel.app/)**
+![vom-logo-dark](https://github.com/user-attachments/assets/253904b1-79da-484c-8839-021813ae221f)
+
 
 
 
@@ -24,4 +24,6 @@
 <br>
 
 ## **느낀점 & 개선사항**
+한글 리뷰가 없는게 굉장히 아쉬움,
 
+리뷰만 영어로 받아와서 사용했음
