@@ -86,19 +86,19 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 80px;
+  width: 60px;
 }
 
-.nav-search-input{
+.nav-search-input {
   font-family: "Paperlogy-4Regular";
 }
 
-.nav-search-button{
+.nav-search-button {
   font-family: "Paperlogy-6SemiBold" !important;
   width: 80px;
 }
 
-.loading-spinner{
+.loading-spinner {
   display: flex;
   justify-content: center;
   align-items: center;

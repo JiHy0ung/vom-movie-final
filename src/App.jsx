@@ -19,6 +19,8 @@ import MoviePage from "./pages/Movies/MoviePage";
 import MovieDetail from "./pages/MovieDetail/MovieDetail";
 import NotFoundPage from "./pages/NotFoundPage/NotFoundPage";
 import "bootstrap/dist/css/bootstrap.min.css";
+import "react-multi-carousel/lib/styles.css";
+
 
 function App() {
   return (

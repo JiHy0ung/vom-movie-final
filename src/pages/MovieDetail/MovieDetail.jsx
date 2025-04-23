@@ -4,19 +4,28 @@ import { useParams } from "react-router-dom";
 import { useMovieDetailQuery } from "../../hooks/useMovieDetail";
 import { useMovieGenreQuery } from "../../hooks/useMovieGenre";
 import { Spinner } from "react-bootstrap";
-import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import { useMovieTrailerQuery } from "../../hooks/useMovieTrailer";
 import YouTube from "react-youtube";
-import { Badge } from "react-bootstrap";
+import { useMovieRecommendQuery } from "../../hooks/useMovieRecommend";
+import MovieSlider from "../../common/MovieSlider/MovieSlider";
+import MovieRecommend from "./components/MovieRecommend/MovieRecommend";
+import { responsive } from "../../contants/responsive";
+import MovieCard from "../../common/MovieCard/MovieCard";
+import { useMovieReviewsQuery } from "../../hooks/useMovieReviews";
+import MovieReviews from "./components/MovieReviews/MovieReviews";
 
 const MovieDetail = () => {
   const { id } = useParams();
   const { data: movie } = useMovieDetailQuery(id);
   const { data: genre } = useMovieGenreQuery();
   const { data: trailer } = useMovieTrailerQuery(id);
+  const { data: recommend } = useMovieRecommendQuery(id);
+  const { data: reviews } = useMovieReviewsQuery(id);
 
   console.log("ddㅇㅇ", movie);
+  console.log("rrr", recommend);
+  console.log("rv", reviews);
 
   const [show, setShow] = useState(false);
 
@@ -86,7 +95,11 @@ const MovieDetail = () => {
           <div className="movie-detail-overview">
             <div className="movie-detail-overview-text">영화 줄거리</div>
             <div className="movie-detail-overview-content">
-              {movie.overview ? movie.overview : <p>줄거리를 제공하지 않는 영화입니다.</p>}
+              {movie.overview ? (
+                movie.overview
+              ) : (
+                <p>줄거리를 제공하지 않는 영화입니다.</p>
+              )}
             </div>
           </div>
 
@@ -140,7 +153,7 @@ const MovieDetail = () => {
                 {getPopularityLevel(movie.popularity)}
               </div>
               <div className="movie-detail-popularity-num">
-                ({movie.popularity})
+                ({movie.popularity.toFixed(1)})
               </div>
             </div>
           </div>
@@ -169,12 +182,14 @@ const MovieDetail = () => {
         </div>
       </div>
 
-      <div>
-        <p>영화 리뷰</p>
-      </div>
+      <div className="movie-detail-review-recommend-container">
+        <div className="movie-detail-review-container">
+          <MovieReviews movieId={id} />
+        </div>
 
-      <div>
-        <div>추천 영화</div>
+        <div className="movie-detail-recommend-container">
+          <MovieRecommend movieId={id} />
+        </div>
       </div>
     </div>
   );

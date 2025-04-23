@@ -1,0 +1,59 @@
+.movie-review-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  border: 1px solid #fafdff;
+  border-radius: 15px;
+  padding-inline: 2rem;
+  padding-block: 1.5rem;
+  margin-top: 4rem;
+}
+
+.movie-review-title {
+  font-family: "Paperlogy-7Bold";
+  font-size: 35px;
+  color: #ff0033;
+  border-bottom: 1px solid #fafdff;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+
+.movie-review-item {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid rgba(250, 253, 255, 0.3);
+  padding-bottom: 1rem;
+  padding-inline: 1rem;
+}
+
+.movie-review-author-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.movie-review-author {
+  font-family: "Paperlogy-9Black";
+  font-size: 20px;
+  color: #fafdff;
+}
+
+.movie-review-author-rating {
+  font-family: "Paperlogy-6SemiBold";
+  letter-spacing: -0.5px;
+}
+
+.movie-review-content {
+  font-family: "Paperlogy-4Regular";
+  font-size: 15px;
+  color: #fafdff;
+}
+
+.movie-review-button {
+  align-self: flex-end;
+  font-family: "Paperlogy-4Regular";
+  background-color: #ff0033;
+  color: #fafdff;
+  padding: 2px 8px 2px 8px;
+  margin-top: 1rem;
+}

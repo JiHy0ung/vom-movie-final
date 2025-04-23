@@ -8,9 +8,9 @@ const api = axios.create({
     Authorization: `Bearer ${API_KEY}`,
     Accept: "application/json",
   },
-  params: {
-    language: "ko-KR",
-  },
+  // params: {
+  //   language: "ko-KR",
+  // },
 });
 
 // 요청 인터셉터 추가하기

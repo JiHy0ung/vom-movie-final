@@ -1,0 +1,20 @@
+.movie-recommend-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.5rem;
+  border: 1px solid #fafdff;
+  border-radius: 15px;
+  padding-inline: 2rem;
+  padding-block: 1.5rem;
+  margin-top: 4rem;
+}
+
+.movie-recommend-title {
+  font-family: "Paperlogy-7Bold";
+  font-size: 35px;
+  color: #ff0033;
+  border-bottom: 1px solid #fafdff;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+}

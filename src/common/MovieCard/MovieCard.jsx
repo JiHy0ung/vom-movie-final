@@ -93,16 +93,16 @@ const MovieCard = ({ movie }) => {
         </div>
 
         <div className="moviecard-genre-area">
-          {showGenre(movie.genre_ids).map((id) => (
-            <Badge bg="danger" className="moviecard-genre">
-              {id}
+          {showGenre(movie.genre_ids).map((name, index) => (
+            <Badge key={index} bg="danger" className="moviecard-genre">
+              {name}
             </Badge>
           ))}
 
           <p className="moviecard-overview">
-            {movie.overview.length > 50
+            {movie.overview && movie.overview.length > 50
               ? movie.overview.slice(0, 50) + ". . ."
-              : movie.overview}
+              : movie.overview || ""}
           </p>
         </div>
       </div>
