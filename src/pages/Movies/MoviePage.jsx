@@ -73,16 +73,16 @@ const MoviePage = () => {
   const noResults = data?.results.length === 0 && keyword && (
     <div className="no-result-area">
       <p className="no-result">
-        <span className="no-result-keyword">{`"${keyword}"`}</span>에 대한 검색
-        결과가 없습니다.
+        <p className="no-result-keyword">{`"${keyword}"`}</p>
+        <p>에 대한 검색 결과가 없습니다.</p>
       </p>
     </div>
   );
 
   return (
     <Container className="movie-page-container">
-      <Row style={{ display: "flex", justifyContent: "center" }}>
-        <Col lg={2} xs={12}>
+      <Row className="movie-page-area">
+        <Col lg={2} xs={4}>
           <div className="filter-area">
             <div className="popularity-area">
               <button className="popularity-button" onClick={handleSort}>
@@ -124,47 +124,47 @@ const MoviePage = () => {
             </div>
           </div>
         </Col>
-        <Col lg={8} xs={12}>
-          {keyword ? (
+        <Col lg={8} xs={8}>
+          {keyword && data?.results.length > 0 && (
             <div className="no-result-area">
               <p className="no-result">
-                <span className="no-result-keyword">{`"${keyword}"`}</span>에
-                대한 검색 결과
+                <span className="no-result-keyword">{`"${keyword}"`}</span>
+                <span>에 대한 검색 결과</span>
               </p>
             </div>
-          ) : (
-            noResults
           )}
+          {noResults}
+
           <Row>
             {data?.results.map((movie, index) => (
-              <Col key={index} lg={3} xs={12}>
+              <Col key={index} lg={3} xs={7}>
                 <MovieCard movie={movie} />
               </Col>
             ))}
           </Row>
-          <ReactPaginate
-            nextLabel=">"
-            onPageChange={handlePageClick}
-            pageRangeDisplayed={5}
-            marginPagesDisplayed={0}
-            pageCount={data?.total_pages} // 전체 페이지
-            previousLabel="<"
-            pageClassName="page-item"
-            pageLinkClassName="page-link"
-            previousClassName="page-item"
-            previousLinkClassName="page-link"
-            nextClassName="page-item"
-            nextLinkClassName="page-link"
-            breakLabel="..."
-            breakClassName="page-item"
-            breakLinkClassName="page-link"
-            containerClassName="pagination"
-            activeClassName="active"
-            renderOnZeroPageCount={null}
-            forcePage={page - 1} // 현재 페이지
-          />
         </Col>
       </Row>
+      <ReactPaginate
+        nextLabel=">"
+        onPageChange={handlePageClick}
+        pageRangeDisplayed={4}
+        marginPagesDisplayed={0}
+        pageCount={data?.total_pages} // 전체 페이지
+        previousLabel="<"
+        pageClassName="page-item"
+        pageLinkClassName="page-link"
+        previousClassName="page-item"
+        previousLinkClassName="page-link"
+        nextClassName="page-item"
+        nextLinkClassName="page-link"
+        breakLabel="..."
+        breakClassName="page-item"
+        breakLinkClassName="page-link"
+        containerClassName="pagination"
+        activeClassName="active"
+        renderOnZeroPageCount={null}
+        forcePage={page - 1} // 현재 페이지
+      />
     </Container>
   );
 };

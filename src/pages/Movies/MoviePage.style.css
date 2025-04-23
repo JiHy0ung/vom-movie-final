@@ -35,6 +35,11 @@
   width: 100dvw;
 }
 
+.movie-page-area {
+  display: flex;
+  justify-content: center;
+}
+
 .filter-area {
   display: flex;
   flex-direction: column;
@@ -62,7 +67,6 @@
   border: 1px solid white;
   padding-inline: 2rem;
   background-color: rgb(25, 24, 29);
-  z-index: 10000;
 }
 
 .popularity-button:hover {
@@ -98,7 +102,6 @@
   border: 1px solid white;
   padding: 1rem;
   background-color: rgb(25, 24, 29);
-  z-index: 10000;
 }
 
 .genre-button {
@@ -136,21 +139,22 @@
 
 .pagination {
   padding-top: 4rem;
-  background-color: rgba(255, 255, 255, 0) !important;
+  background-color: rgb(25, 24, 29) !important;
   border-radius: 0px !important;
   justify-content: center; /* 중앙 정렬 */
+  width: 100%;
 }
 
 /* 페이지 번호 버튼 */
 .page-item {
-  background-color: rgba(255, 255, 255, 0) !important;
+  background-color: rgb(25, 24, 29) !important;
   border-radius: 0px !important;
   font-family: "Paperlogy-3Light";
 }
 
 /* 페이지 번호 링크 */
 .page-link {
-  background-color: rgba(255, 255, 255, 0) !important;
+  background-color: rgb(25, 24, 29) !important;
   color: #ffffff !important;
   padding: 10px 15px;
   text-decoration: none;
@@ -184,4 +188,61 @@
 .page-item.break {
   background-color: #f8f9fa;
   color: #6c757d;
+}
+
+@media (max-width: 490px) {
+  .movie-page-container {
+    padding-block: 2rem;
+  }
+
+  .movie-page-area {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .filter-area {
+    width: fit-content;
+  }
+
+  .popularity-area {
+    font-size: 15px;
+  }
+
+  .popularity-button {
+    padding-inline: 1.1rem;
+  }
+
+  .popularity-desc {
+    font-size: 15px;
+  }
+
+  .popularity-asc {
+    font-size: 15px;
+  }
+
+  .genre-select-area {
+    font-size: 12px;
+  }
+
+  .genre-select {
+    gap: 0.5rem;
+    padding: 0.5rem;
+  }
+
+  .genre-button {
+    font-size: 13px;
+    padding: 0.5rem;
+  }
+
+  .pagination {
+    padding-top: 2rem;
+  }
+
+  .no-result {
+    flex-direction: column;
+  }
+
+  .no-result p{
+    margin: 2px;
+  }
 }
