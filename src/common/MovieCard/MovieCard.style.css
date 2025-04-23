@@ -146,10 +146,10 @@
   border-bottom: 1px solid white;
 }
 
-.moviecard-genre-area {
-}
-
 .moviecard-genre {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-family: "Paperlogy-4Regular";
   margin-right: 3px;
 }

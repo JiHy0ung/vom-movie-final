@@ -37,13 +37,13 @@ const AppLayout = () => {
         bg="dark"
         data-bs-theme="dark"
         data-theme="dark"
-        style={{ backgroundColor: "#2b2f33", zIndex:"100000"}}
+        style={{ backgroundColor: "#2b2f33", zIndex:"100"}}
       >
         <Container fluid>
           <Navbar.Brand href="/" className="ms-2">
             <img
               className="logo-img"
-              src="logo/vom-logo-dark.png"
+              src="/logo/vom-logo-dark.png"
               alt="logo-image"
             />
           </Navbar.Brand>

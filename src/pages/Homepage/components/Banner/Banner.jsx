@@ -2,15 +2,17 @@ import React from "react";
 import { usePopularMoviesQuery } from "../../../../hooks/usePopularMovies";
 import { Alert, Spinner } from "react-bootstrap";
 import "./Banner.style.css";
+import { useNavigate } from "react-router-dom";
 
 const Banner = () => {
+  const navigate = useNavigate();
   const { data, isLoading, isError, error } = usePopularMoviesQuery();
 
   console.log("ddd", data);
 
   if (isLoading) {
     return (
-      <div>
+      <div className="loading-spinner">
         <Spinner
           animation="border"
           variant="danger"
@@ -19,9 +21,14 @@ const Banner = () => {
       </div>
     );
   }
+
   if (isError) {
     return <Alert variant="danger">{error.message}</Alert>;
   }
+
+  const handleClick = () => {
+    navigate(`/movies/${data.results[0].id}`);
+  };
 
   return (
     <div
@@ -32,10 +39,11 @@ const Banner = () => {
           ")",
       }}
       className="banner"
+      onClick={handleClick}
     >
       <div className="banner-text-area">
         <h1 className="banner-movie-title">{data?.results[0].title}</h1>
-        {/* 줄거리가 한글로 안나옴 */}
+        {/* 줄거리가 한글로 안 나오는 영화들도 있음 (국내 미개봉 영화들) */}
         <p className="banner-movie-overview">{data?.results[0].overview}</p>
       </div>
     </div>

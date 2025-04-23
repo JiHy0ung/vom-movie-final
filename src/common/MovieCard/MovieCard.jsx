@@ -1,9 +1,12 @@
 import React from "react";
-import { Badge, Row } from "react-bootstrap";
+import { Badge } from "react-bootstrap";
 import "./MovieCard.style.css";
 import { useMovieGenreQuery } from "../../hooks/useMovieGenre";
+import { useNavigate } from "react-router-dom";
 
 const MovieCard = ({ movie }) => {
+  const navigate = useNavigate();
+
   const getPopularityLevel = (popularity) => {
     if (popularity <= 600) return "인기 중🍿";
     if (popularity <= 800) return "🔥핫한 영화";
@@ -23,6 +26,10 @@ const MovieCard = ({ movie }) => {
     return genreNameList;
   };
 
+  const handleClick = () => {
+    navigate(`/movies/${movie.id}`);
+  };
+
   return (
     <div
       style={{
@@ -33,6 +40,7 @@ const MovieCard = ({ movie }) => {
         })`,
       }}
       className="movie-card"
+      onClick={handleClick}
     >
       <div className="overlay">
         <div className="adult-title">

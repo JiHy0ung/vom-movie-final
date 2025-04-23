@@ -97,3 +97,11 @@
   font-family: "Paperlogy-6SemiBold" !important;
   width: 80px;
 }
+
+.loading-spinner{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100dvw;
+  height: 100dvh;
+}

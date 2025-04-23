@@ -56,7 +56,7 @@ const MoviePage = () => {
 
   if (isLoading) {
     return (
-      <div>
+      <div className="loading-spinner">
         <Spinner
           animation="border"
           variant="danger"
@@ -124,7 +124,7 @@ const MoviePage = () => {
             </div>
           </div>
         </Col>
-        <Col lg={8} xs={8}>
+        <Col lg={10} xs={8}>
           {keyword && data?.results.length > 0 && (
             <div className="no-result-area">
               <p className="no-result">

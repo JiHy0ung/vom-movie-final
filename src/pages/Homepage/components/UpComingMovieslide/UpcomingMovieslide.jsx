@@ -13,7 +13,7 @@ const UpComingMovieslide = () => {
 
   if (isLoading) {
     return (
-      <div>
+      <div className="loading-spinner">
         <Spinner
           animation="border"
           variant="danger"
