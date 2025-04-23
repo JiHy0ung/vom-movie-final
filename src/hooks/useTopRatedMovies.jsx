@@ -2,7 +2,11 @@ import { useQuery } from "@tanstack/react-query";
 import api from "../utils/api";
 
 const fetchTopRatedMovies = () => {
-  return api.get(`/movie/top_rated?language=en-US&page=1`);
+  return api.get(`/movie/top_rated?language=en-US&page=1`, {
+    params: {
+      language: "ko-KR",
+    },
+  });
 };
 
 export const useTopRatedMoviesQuery = () => {

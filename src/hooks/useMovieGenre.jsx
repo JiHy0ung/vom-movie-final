@@ -4,7 +4,7 @@ import api from "../utils/api";
 const fetchMovieGenre = () => {
   return api.get(`/genre/movie/list`, {
     params: {
-      language: "ko-KR", // 영화 정보는 한글로
+      language: "ko-KR",
     },
   });
 };

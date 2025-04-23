@@ -36,7 +36,7 @@ const MovieReviews = ({ movieId }) => {
       <div className="movie-review-area">
         {data?.map((item, index) => {
           const isExpanded = expandedReviews[index];
-          const shortContent = item.content.slice(0, 400);
+          const shortContent = item.content.slice(0, 150);
           return (
             <div key={index} className="movie-review-item mb-4">
               <div className="movie-review-author-info">
@@ -50,7 +50,7 @@ const MovieReviews = ({ movieId }) => {
               <div className="movie-review-content">
                 {isExpanded ? item.content : `${shortContent}...`}
               </div>
-              {item.content.length > 400 && (
+              {item.content.length > 150 && (
                 <button
                   className="movie-review-button"
                   onClick={() => toggleReview(index)}
