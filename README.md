@@ -19,6 +19,8 @@
 <br>
 
 ## **피드백 받은 내용**
+* 페이지네이션에서 마지막 페이지가 너무 큰 숫자(49873)로 나옴
+  pageRangeDisplayed={5}과 marginPagesDisplayed={0}의 값을 조절하여 문제 해결함.
 
 <br>
 
