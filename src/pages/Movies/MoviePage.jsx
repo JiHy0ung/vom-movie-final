@@ -145,8 +145,8 @@ const MoviePage = () => {
           <ReactPaginate
             nextLabel=">"
             onPageChange={handlePageClick}
-            pageRangeDisplayed={3}
-            marginPagesDisplayed={2}
+            pageRangeDisplayed={5}
+            marginPagesDisplayed={0}
             pageCount={data?.total_pages} // 전체 페이지
             previousLabel="<"
             pageClassName="page-item"

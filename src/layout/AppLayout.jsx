@@ -13,7 +13,7 @@ const AppLayout = () => {
   const [keyword, setKeyword] = useState("");
 
   const searchByKeyword = (event) => {
-    event.preventDefault(); // refresh 막음.
+    event.preventDefault(); // refresh 막음. 안쓰면 검색이 안됨 계속 popular무비만 보여줌.
     // url 바꿔주기
     navigate(`/movies?q=${keyword}`);
     setKeyword("");
