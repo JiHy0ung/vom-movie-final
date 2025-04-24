@@ -38,9 +38,10 @@ const AppLayout = () => {
         data-bs-theme="dark"
         data-theme="dark"
         style={{ backgroundColor: "#2b2f33", zIndex:"100"}}
+        className="pe-3"
       >
         <Container fluid>
-          <Navbar.Brand href="/" className="ms-2">
+          <Navbar.Brand href="/" className="ms-3 mt-1 mb-1">
             <img
               className="logo-img"
               src="/logo/vom-logo-dark.png"
@@ -82,7 +83,7 @@ const AppLayout = () => {
                 <Form.Control
                   type="search"
                   placeholder="영화 검색"
-                  className="me-2 nav-search-input"
+                  className="me-3 nav-search-input"
                   aria-label="Search"
                   value={keyword}
                   onChange={(event) => setKeyword(event.target.value)}

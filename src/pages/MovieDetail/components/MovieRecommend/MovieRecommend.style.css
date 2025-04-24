@@ -22,15 +22,16 @@
 }
 
 .movie-recommend-row {
-  padding-right: 4rem;
+  padding-left: 1rem;
 }
 
-@media (max-width: 490px) {
+@media (max-width: 1410px) {
   .movie-recommend-container {
     padding-inline: 1rem;
     padding-block: 1rem;
     margin-top: 0rem;
     margin-inline: 1rem;
+    width: 60vw;
   }
 
   .movie-recommend-title {
@@ -42,6 +43,29 @@
   .movie-recommend-row {
     display: flex;
     justify-content: center;
-    padding-right: 8rem;
+    padding-right: 10rem;
+  }
+}
+
+@media (max-width: 490px) {
+  .movie-recommend-container {
+    padding-inline: 1rem;
+    padding-block: 1rem;
+    margin-top: 0rem;
+    margin-inline: 2rem;
+    width: unset;
+  }
+
+  .movie-recommend-title {
+    font-size: 25px;
+    padding-bottom: 0.5rem;
+    padding-left: 0.5rem;
+  }
+
+  .movie-recommend-row {
+    display: flex;
+    justify-content: center;
+    padding-right: 7rem;
+    padding-left: 0;
   }
 }

@@ -222,6 +222,121 @@
   gap: 4rem;
 }
 
+@media (max-width: 1410px) {
+  .movie-detail-container {
+    padding-top: 1.5rem;
+    padding-inline: 1.5rem;
+  }
+
+  .movie-detail-area {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    width: 70vw;
+  }
+
+  .movie-detail-poster {
+    width: 440px;
+    height: 660px;
+  }
+
+  .movie-detail-title {
+    font-size: 35px;
+    letter-spacing: -0.5px;
+  }
+
+  .movie-detail-genre {
+    font-size: 13px;
+    padding-inline: 12px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+  }
+
+  .movie-detail-overview-text {
+    font-size: 25px;
+  }
+
+  .movie-detail-overview {
+    padding-block: 0.7rem;
+    padding-inline: 1rem;
+  }
+
+  .movie-detail-star-icon {
+    width: 30px;
+    height: 30px;
+  }
+
+  .movie-detail-popularity-area {
+    border: none;
+  }
+
+  .movie-detail-popularity {
+    padding-left: 0;
+    font-size: 25px;
+  }
+
+  .movie-detail-vote-container {
+    width: 100%;
+    gap: 1rem;
+  }
+
+  .movie-detail-infos {
+    padding-inline: 0.5rem;
+    gap: 1rem;
+  }
+
+  .movie-detail-trailer-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+  }
+
+  .movie-detail-trailer-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-inline: 30%;
+    border-radius: 15px;
+  }
+
+  .modal-dialog {
+    padding-top: 4rem;
+  }
+
+  .movie-detail-review-recommend-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+  }
+
+  .movie-detail-review-recommend-container {
+    gap: 2rem;
+    padding-bottom: 4rem;
+  }
+}
+
+@media (max-width: 740px) {
+  .movie-detail-infos {
+    flex-direction: column;
+    padding-inline: 0.5rem;
+    gap: 1rem;
+  }
+
+  .movie-detail-vote-container {
+    flex-direction: column;
+    width: 100%;
+    gap: 1rem;
+  }
+
+  .movie-detail-trailer-button {
+    padding-inline: 20%;
+  }
+}
+
 @media (max-width: 490px) {
   .movie-detail-container {
     padding-top: 1.5rem;
@@ -233,6 +348,7 @@
     justify-content: center;
     align-items: center;
     gap: 1.5rem;
+    width: unset;
   }
 
   .movie-detail-poster {
@@ -290,7 +406,7 @@
   }
 
   .movie-detail-trailer-area {
-    display: block;
+    display: flex;
     justify-content: center;
     align-items: center;
     z-index: 999;
@@ -306,14 +422,6 @@
 
   .modal-dialog {
     padding-top: 4rem;
-  }
-
-  .movie-detail-review-recommend-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 4rem;
   }
 
   .movie-detail-review-recommend-container {

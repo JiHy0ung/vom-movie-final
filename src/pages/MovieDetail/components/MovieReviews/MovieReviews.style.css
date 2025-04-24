@@ -60,12 +60,47 @@
   margin-top: 1rem;
 }
 
-@media (max-width: 490px) {
+@media (max-width: 1410px) {
   .movie-review-container {
     padding-block: 1rem;
     padding-inline: 1rem;
     margin-top: 2rem;
     margin-inline: 1rem;
+    width: 70vw;
+  }
+
+  .movie-review-title {
+    font-size: 25px;
+    padding-left: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+
+  .movie-review-author-info {
+    justify-content: space-between;
+  }
+
+  .movie-review-author {
+    font-size: 17px;
+  }
+
+  .movie-review-content {
+    font-size: 14px;
+  }
+
+  .movie-review-button {
+    padding: 1px 8px 3px 8px;
+    margin-top: 0.8rem;
+  }
+}
+
+
+@media (max-width: 490px) {
+  .movie-review-container {
+    padding-block: 1rem;
+    padding-inline: 1rem;
+    margin-top: 2rem;
+    margin-inline: 2rem;
+    width: unset;
   }
 
   .movie-review-title {
