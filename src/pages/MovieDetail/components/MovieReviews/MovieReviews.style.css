@@ -51,6 +51,13 @@
   color: #fafdff;
 }
 
+.movie-review-empty{
+  font-family: "Paperlogy-4Regular";
+  font-size: 15px;
+  color: #fafdff;
+  padding-inline: 5.8rem;
+}
+
 .movie-review-button {
   align-self: flex-end;
   font-family: "Paperlogy-4Regular";

@@ -34,33 +34,37 @@ const MovieReviews = ({ movieId }) => {
     <div className="movie-review-container">
       <div className="movie-review-title">영화 리뷰</div>
       <div className="movie-review-area">
-        {data?.map((item, index) => {
-          const isExpanded = expandedReviews[index];
-          const shortContent = item.content.slice(0, 200);
-          return (
-            <div key={index} className="movie-review-item mb-4">
-              <div className="movie-review-author-info">
-                <div className="movie-review-author">{item.author}</div>
-                <div className="movie-review-author-rating">
-                  {item.author_details.rating
-                    ? `${item.author_details.rating} / 10`
-                    : "평점 없음"}
+        {data?.length === 0 ? (
+          <div className="movie-review-empty">영화 리뷰가 없습니다.</div>
+        ) : (
+          data?.map((item, index) => {
+            const isExpanded = expandedReviews[index];
+            const shortContent = item.content.slice(0, 200);
+            return (
+              <div key={index} className="movie-review-item mb-4">
+                <div className="movie-review-author-info">
+                  <div className="movie-review-author">{item.author}</div>
+                  <div className="movie-review-author-rating">
+                    {item.author_details.rating
+                      ? `${item.author_details.rating} / 10`
+                      : "평점 없음"}
+                  </div>
                 </div>
+                <div className="movie-review-content">
+                  {isExpanded ? item.content : `${shortContent}...`}
+                </div>
+                {item.content.length > 200 && (
+                  <button
+                    className="movie-review-button"
+                    onClick={() => toggleReview(index)}
+                  >
+                    {isExpanded ? "접기" : "더보기"}
+                  </button>
+                )}
               </div>
-              <div className="movie-review-content">
-                {isExpanded ? item.content : `${shortContent}...`}
-              </div>
-              {item.content.length > 200 && (
-                <button
-                  className="movie-review-button"
-                  onClick={() => toggleReview(index)}
-                >
-                  {isExpanded ? "접기" : "더보기"}
-                </button>
-              )}
-            </div>
-          );
-        })}
+            );
+          })
+        )}
       </div>
     </div>
   );
