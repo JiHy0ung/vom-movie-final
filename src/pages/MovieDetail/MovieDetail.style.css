@@ -37,6 +37,7 @@
   color: #fafdff;
   margin: 0;
   letter-spacing: -1px;
+  text-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
 }
 
 .movie-detail-genre-area {
@@ -57,6 +58,7 @@
   padding-top: 3px;
   padding-bottom: 4px;
   border-radius: 10px;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
 }
 
 .movie-detail-overview-text {
@@ -77,11 +79,14 @@
   padding: 1rem;
   border: 1px solid #fafdff;
   border-radius: 10px;
+  background-color: rgba(25, 24, 29, 0.7);
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
 }
 
 .movie-detail-star-icon {
   width: 35px;
   height: 35px;
+  text-shadow: 0 0 3px black;
 }
 
 .movie-detail-star-icon.active {
@@ -105,6 +110,7 @@
   gap: 0.5rem;
   font-family: "Paperlogy-6SemiBold";
   font-size: 30px;
+  text-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
 }
 
 .movie-detail-popularity-num {
@@ -112,6 +118,11 @@
   justify-content: center;
   font-family: "Paperlogy-5Medium";
   font-size: 13px;
+}
+
+.movie-detail-vote-container {
+  display: flex;
+  gap: 2rem;
 }
 
 .movie-detail-vote-area {
@@ -137,12 +148,14 @@
   gap: 7px;
   letter-spacing: -0.5px;
   font-size: 17px;
+  text-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
 }
 
 .movie-detail-runtime-text {
   background-color: #fafdff;
   color: black;
   padding-inline: 5px;
+  text-shadow: none;
 }
 
 .movie-detail-date {
@@ -150,12 +163,14 @@
   gap: 7px;
   letter-spacing: -0.5px;
   font-size: 17px;
+  text-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
 }
 
 .movie-detail-date-text {
   background-color: #fafdff;
   color: black;
   padding-inline: 5px;
+  text-shadow: none;
 }
 
 .movie-detail-budget {
@@ -163,12 +178,14 @@
   gap: 7px;
   letter-spacing: -0.5px;
   font-size: 17px;
+  text-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
 }
 
 .movie-detail-budget-text {
   background-color: #fafdff;
   color: black;
   padding-inline: 5px;
+  text-shadow: none;
 }
 
 .movie-detail-trailer-area {
@@ -181,6 +198,12 @@
   color: #ff0033;
   padding-inline: 2rem;
   border-radius: 15px;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+}
+
+.movie-detail-trailer-button:hover {
+  background-color: #ff0033;
+  color: #fafdff;
 }
 
 .modal-dialog {
@@ -199,8 +222,102 @@
   gap: 4rem;
 }
 
-.movie-detail-review-container {
-}
+@media (max-width: 490px) {
+  .movie-detail-container {
+    padding-top: 1.5rem;
+    padding-inline: 1.5rem;
+  }
 
-.movie-detail-recommend-container {
+  .movie-detail-area {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .movie-detail-poster {
+    width: 330px;
+    height: 495px;
+  }
+
+  .movie-detail-title {
+    font-size: 35px;
+    letter-spacing: -0.5px;
+  }
+
+  .movie-detail-genre {
+    font-size: 13px;
+    padding-inline: 12px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+  }
+
+  .movie-detail-overview-text {
+    font-size: 25px;
+  }
+
+  .movie-detail-overview {
+    padding-block: 0.7rem;
+    padding-inline: 1rem;
+  }
+
+  .movie-detail-star-icon {
+    width: 30px;
+    height: 30px;
+  }
+
+  .movie-detail-popularity-area {
+    border: none;
+  }
+
+  .movie-detail-popularity {
+    padding-left: 0;
+    font-size: 25px;
+  }
+
+  .movie-detail-vote-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    gap: 1rem;
+  }
+
+  .movie-detail-infos {
+    flex-direction: column;
+    padding-inline: 0.5rem;
+    gap: 1rem;
+  }
+
+  .movie-detail-trailer-area {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+  }
+
+  .movie-detail-trailer-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-inline: 8.5rem;
+    border-radius: 15px;
+  }
+
+  .modal-dialog {
+    padding-top: 4rem;
+  }
+
+  .movie-detail-review-recommend-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+  }
+
+  .movie-detail-review-recommend-container {
+    gap: 2rem;
+    padding-bottom: 4rem;
+  }
 }

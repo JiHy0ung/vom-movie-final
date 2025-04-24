@@ -7,6 +7,8 @@
   padding-inline: 2rem;
   padding-block: 1.5rem;
   margin-top: 4rem;
+  background-color: rgba(25, 24, 29, 0.7);
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
 }
 
 .movie-review-title {
@@ -56,4 +58,36 @@
   color: #fafdff;
   padding: 2px 8px 2px 8px;
   margin-top: 1rem;
+}
+
+@media (max-width: 490px) {
+  .movie-review-container {
+    padding-block: 1rem;
+    padding-inline: 1rem;
+    margin-top: 2rem;
+    margin-inline: 1rem;
+  }
+
+  .movie-review-title {
+    font-size: 25px;
+    padding-left: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+
+  .movie-review-author-info {
+    justify-content: space-between;
+  }
+
+  .movie-review-author {
+    font-size: 17px;
+  }
+
+  .movie-review-content {
+    font-size: 14px;
+  }
+
+  .movie-review-button {
+    padding: 1px 8px 3px 8px;
+    margin-top: 0.8rem;
+  }
 }

@@ -8,10 +8,7 @@ import Modal from "react-bootstrap/Modal";
 import { useMovieTrailerQuery } from "../../hooks/useMovieTrailer";
 import YouTube from "react-youtube";
 import { useMovieRecommendQuery } from "../../hooks/useMovieRecommend";
-import MovieSlider from "../../common/MovieSlider/MovieSlider";
 import MovieRecommend from "./components/MovieRecommend/MovieRecommend";
-import { responsive } from "../../contants/responsive";
-import MovieCard from "../../common/MovieCard/MovieCard";
 import { useMovieReviewsQuery } from "../../hooks/useMovieReviews";
 import MovieReviews from "./components/MovieReviews/MovieReviews";
 
@@ -57,7 +54,15 @@ const MovieDetail = () => {
   };
 
   return (
-    <div className="movie-detail-container">
+    <div
+      className="movie-detail-container"
+      style={{
+        backgroundImage: `linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://media.themoviedb.org/t/p/w1066_and_h600_bestv2${movie.backdrop_path})`,
+        undPosition: "center",
+        backgroundSize: "cover",
+        backdropFilter: "blur(5px)",
+      }}
+    >
       <div className="movie-detail-area">
         <img
           src={`${
@@ -118,7 +123,7 @@ const MovieDetail = () => {
             </div>
           </div>
 
-          <div style={{ display: "flex", gap: "2rem" }}>
+          <div className="movie-detail-vote-container">
             <div className="movie-detail-vote-area">
               <span
                 className="movie-detail-stars"
@@ -171,7 +176,7 @@ const MovieDetail = () => {
                 {trailer ? (
                   <YouTube
                     videoId={trailer.key}
-                    opts={{ width: "100%", height: "700px" }}
+                    opts={{ width: "100%", height: "500px" }}
                   />
                 ) : (
                   <p>예고편을 제공하지 않는 영화입니다.</p>

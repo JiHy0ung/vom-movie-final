@@ -5,9 +5,11 @@
   gap: 0.5rem;
   border: 1px solid #fafdff;
   border-radius: 15px;
-  padding-inline: 2rem;
+  padding-inline: 4rem;
   padding-block: 1.5rem;
   margin-top: 4rem;
+  background-color: rgba(25, 24, 29, 0.7);
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
 }
 
 .movie-recommend-title {
@@ -16,7 +18,30 @@
   color: #ff0033;
   border-bottom: 1px solid #fafdff;
   padding-bottom: 1rem;
-
-  
   margin-bottom: 1rem;
+}
+
+.movie-recommend-row {
+  padding-right: 4rem;
+}
+
+@media (max-width: 490px) {
+  .movie-recommend-container {
+    padding-inline: 1rem;
+    padding-block: 1rem;
+    margin-top: 0rem;
+    margin-inline: 1rem;
+  }
+
+  .movie-recommend-title {
+    font-size: 25px;
+    padding-bottom: 0.5rem;
+    padding-left: 0.5rem;
+  }
+
+  .movie-recommend-row {
+    display: flex;
+    justify-content: center;
+    padding-right: 8rem;
+  }
 }

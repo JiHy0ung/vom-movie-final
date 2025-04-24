@@ -27,9 +27,9 @@ const MovieRecommend = ({ movieId }) => {
   return (
     <div className="movie-recommend-container">
       <div className="movie-recommend-title">추천 영화</div>
-      <Row>
+      <Row className="movie-recommend-row">
         {data.map((movie, index) => (
-          <Col key={index} xs={12} sm={6} md={5} lg={4} xl={3} >
+          <Col key={index} xs={6} sm={6} md={6} lg={4} xl={3} >
             <MovieCard movie={movie} />
           </Col>
         ))}
