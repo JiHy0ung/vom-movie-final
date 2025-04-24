@@ -6,21 +6,9 @@ import { useNavigate } from "react-router-dom";
 
 const Banner = () => {
   const navigate = useNavigate();
-  const { data, isLoading, isError, error } = usePopularMoviesQuery();
+  const { data, isError, error } = usePopularMoviesQuery();
 
   console.log("ddd", data);
-
-  if (isLoading) {
-    return (
-      <div className="loading-spinner">
-        <Spinner
-          animation="border"
-          variant="danger"
-          style={{ width: "5rem", height: "5rem" }}
-        />
-      </div>
-    );
-  }
 
   if (isError) {
     return <Alert variant="danger">{error.message}</Alert>;

@@ -9,19 +9,7 @@ import { Spinner } from "react-bootstrap";
 
 
 const PopularMovieslide = () => {
-  const { data, isLoading, isError, error } = usePopularMoviesQuery();
-
-  if (isLoading) {
-    return (
-      <div className="loading-spinner">
-        <Spinner
-          animation="border"
-          variant="danger"
-          style={{ width: "5rem", height: "5rem" }}
-        />
-      </div>
-    );
-  }
+  const { data, isError, error } = usePopularMoviesQuery();
 
   if (isError) {
     return <Alert variant="danger">{error.message}</Alert>;

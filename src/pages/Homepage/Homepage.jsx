@@ -5,19 +5,32 @@
   4. upcoming movie
 */
 
-import React from "react";
+import React, { Suspense } from "react";
 import Banner from "./components/Banner/Banner";
 import PopularMovieslide from "./components/PopularMovieslide/PopularMovieslide";
 import TopRatedMovieslide from "./components/TopRatedMovieslide/TopRatedMovieslide";
 import UpComingMovieslide from "./components/UpComingMovieslide/UpcomingMovieslide";
+import { Spinner } from "react-bootstrap";
 
 const Homepage = () => {
   return (
     <div>
-      <Banner />
-      <PopularMovieslide />
-      <TopRatedMovieslide />
-      <UpComingMovieslide />
+      <Suspense
+        fallback={
+          <div className="loading-spinner">
+        <Spinner
+          animation="border"
+          variant="danger"
+          style={{ width: "5rem", height: "5rem" }}
+        />
+      </div>
+        }
+      >
+        <Banner />
+        <PopularMovieslide />
+        <TopRatedMovieslide />
+        <UpComingMovieslide />
+      </Suspense>
     </div>
   );
 };

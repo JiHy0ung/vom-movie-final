@@ -11,17 +11,6 @@ import { Spinner } from "react-bootstrap";
 const UpComingMovieslide = () => {
   const { data, isLoading, isError, error } = useUpcomingMoviesQuery();
 
-  if (isLoading) {
-    return (
-      <div className="loading-spinner">
-        <Spinner
-          animation="border"
-          variant="danger"
-          style={{ width: "5rem", height: "5rem" }}
-        />
-      </div>
-    );
-  }
 
   if (isError) {
     return <Alert variant="danger">{error.message}</Alert>;
