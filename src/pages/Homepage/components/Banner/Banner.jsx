@@ -1,6 +1,6 @@
 import React from "react";
 import { usePopularMoviesQuery } from "../../../../hooks/usePopularMovies";
-import { Alert, Spinner } from "react-bootstrap";
+import { Alert } from "react-bootstrap";
 import "./Banner.style.css";
 import { useNavigate } from "react-router-dom";
 

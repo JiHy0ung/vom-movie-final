@@ -5,12 +5,9 @@ import "react-multi-carousel/lib/styles.css";
 import "./UpcomingMovieslide.style.css";
 import MovieSlider from "../../../../common/MovieSlider/MovieSlider";
 import { responsive } from "../../../../contants/responsive";
-import { Spinner } from "react-bootstrap";
-
 
 const UpComingMovieslide = () => {
-  const { data, isLoading, isError, error } = useUpcomingMoviesQuery();
-
+  const { data, isError, error } = useUpcomingMoviesQuery();
 
   if (isError) {
     return <Alert variant="danger">{error.message}</Alert>;

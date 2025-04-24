@@ -5,8 +5,6 @@ import "react-multi-carousel/lib/styles.css";
 import "./PopularMovieslide.style.css";
 import MovieSlider from "../../../../common/MovieSlider/MovieSlider";
 import { responsive } from "../../../../contants/responsive";
-import { Spinner } from "react-bootstrap";
-
 
 const PopularMovieslide = () => {
   const { data, isError, error } = usePopularMoviesQuery();
